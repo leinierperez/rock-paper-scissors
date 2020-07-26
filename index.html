@@ -22,7 +22,46 @@
         return "Scissors";
       }
     }
-    console.log(computerPlay());
+
+    function playRound(playerSelection, computerSelection) {
+      let playerSelect = playerSelection.toUpperCase();
+      let computerSelect = computerSelection.toUpperCase();
+      let playerScore = 0;
+      let computerScore = 0;
+      if (playerSelect === computerSelect){
+        return "It's a draw!!"
+      }
+      else if (playerSelect === "ROCK" && computerSelect === "PAPER"){
+        return "You Lose! " + computerSelect.toLowerCase() + " beats " + playerSelect.toLowerCase();
+      }
+      else if (playerSelect === "ROCK" && computerSelect === "SCISSORS"){
+        return "You Win! " + playerSelect.toLowerCase() + " beats " + computerSelect.toLowerCase();
+      }
+      else if (playerSelect === "PAPER" && computerSelect === "SCISSORS"){
+        return "You Lose! " + computerSelect.toLowerCase() + " beats " + playerSelect.toLowerCase();
+      }
+      else if (playerSelect === "PAPER" && computerSelect === "ROCK"){
+        return "You WIN! " + playerSelect.toLowerCase() + " beats " + computerSelect.toLowerCase();
+      }
+      else if (playerSelect === "SCISSORS" && computerSelect === "ROCK"){
+        return "You Lose! " + computerSelect.toLowerCase() + " beats " + playerSelect.toLowerCase();
+      }
+      else if (playerSelect === "SCISSORS" && computerSelect === "PAPER"){
+        return "You WIN! " + playerSelect.toLowerCase() + " beats " + computerSelect.toLowerCase();
+      }
+    }
+
+    function game(){
+      for (let i = 0; i < 5; i++){
+        let playerSelection = prompt("Rock Paper Scissors");
+        let computerSelection = computerPlay();
+        console.log(playRound(playerSelection, computerSelection));
+      }
+    }
+
+    const playerSelection = "paper";
+    const computerSelection = computerPlay();
+    // game();
   </script>
 </body>
 </html>
