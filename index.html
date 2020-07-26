@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+  <script>
+    function computerPlay () {
+      let rock = 0;
+      let paper = 1;
+      let scissors = 2;
+      let randNum = Math.floor(Math.random() * 3);
+      if (rock === randNum) {
+        return "Rock";
+      }
+      if (paper === randNum) {
+        return "Paper";
+      }
+      if (scissors === randNum) {
+        return "Scissors";
+      }
+    }
+    console.log(computerPlay());
+  </script>
+</body>
+</html>
