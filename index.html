@@ -8,17 +8,14 @@
 <body>
   <script>
     function computerPlay () {
-      let rock = 0;
-      let paper = 1;
-      let scissors = 2;
       let randNum = Math.floor(Math.random() * 3);
-      if (rock === randNum) {
+      if (randNum === 0) {
         return "Rock";
       }
-      if (paper === randNum) {
+      else if (randNum === 1) {
         return "Paper";
       }
-      if (scissors === randNum) {
+      else if (randNum === 2) {
         return "Scissors";
       }
     }
