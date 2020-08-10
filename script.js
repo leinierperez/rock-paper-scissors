@@ -1,3 +1,8 @@
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+	button.addEventListener('click', playRound);
+});
+
 function computerPlay() {
 	let randNum = Math.floor(Math.random() * 3);
 	if (randNum === 0) {
@@ -44,4 +49,3 @@ function game() {
 		console.log('Computer has won!');
 	}
 }
-game();
