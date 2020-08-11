@@ -14,7 +14,10 @@ function computerPlay() {
 	}
 }
 
-function playRound(playerSelection, computerSelection) {
+function playRound(e) {
+	let playerSelection = e.target.id;
+	let computerSelection = computerPlay();
+
 	let playerSelect = playerSelection.toUpperCase();
 	let computerSelect = computerSelection.toUpperCase();
 	let playerWin = false;

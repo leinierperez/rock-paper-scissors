@@ -1,0 +1,68 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	background: #14213d;
+	height: 100%;
+	margin: 0;
+}
+
+button {
+	border: none;
+	background: #fca311;
+}
+
+.choices {
+	width: 50px;
+	height: 50px;
+}
+
+#hand-choice img {
+	width: 250px;
+	height: 250px;
+}
+
+h2,
+h3 {
+	color: #e5e5e5;
+}
+
+#container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100%;
+}
+
+#score-header {
+	display: flex;
+}
+
+#score-header h2 {
+	margin: 0 40px 0 40px;
+	font-size: 1.8em;
+}
+
+#game-log {
+	text-align: center;
+}
+#game-log h3 {
+	margin-top: 10px;
+	font-size: 1.2em;
+}
+
+#game-log h2 {
+	font-size: 1.7em;
+}
+
+#game-choices {
+	margin-top: 20px;
+	display: flex;
+}
+
+#game-choices button {
+}
