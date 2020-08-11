@@ -9,20 +9,18 @@
 <body>
   <div id="container">
     <header id="score-header">
-      <h2>Player Score:</h2>
-      <h2>Computer Score:</h2>
+      <h2>Player Score: 0</h2>
+      <h2>Computer Score: 0</h2>
     </header>
 
     <div id="hand-choice">
-      <img src="/images/rock.png">
-      <img src="/images/paper.png">
-      <img src="/images/scissors.png">
+      <img id="player-choice" src="/images/rock.png">
+      <img id="computer-choice" src="/images/rock.png">
     </div>
 
     <div id="game-log">
-      <h2>Player has won!</h2>
-      <span></span>
-      <h3>Rock beats scissors</h3>
+      <h2 id="who-won">Player has won!</h2>
+      <h3 id="x-beats-y">Rock beats scissors</h3>
     </div>
 
     <div id="game-choices">
@@ -31,6 +29,6 @@
       <button id="scissors" type="button"><img class="choices" src="/images/scissors.png"></button>
     </div>
   </div>
+  <script src="/script.js"></script>
 </body>
-<script src="/script.js"></script>
 </html>
