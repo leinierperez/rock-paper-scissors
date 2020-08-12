@@ -83,3 +83,9 @@ h3 {
 #game-choices button:focus {
 	outline: 0;
 }
+
+#game-choices button:active {
+	/* offset-x | offset-y | blur-radius | spread-radius | color */
+	box-shadow: 0 0 3pt 2.9pt #e5e5e5;
+	transform: scale(1.1);
+}
