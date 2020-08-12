@@ -18,38 +18,38 @@ function playRound(playerSelection) {
 	let playerWin = false;
 	let computerWin = false;
 	if (playerSelect === computerSelect) {
-		playerPic.src = `/images/${playerSelection}.png`;
-		computerPic.src = `/images/${computerSelection}_left.png`;
+		playerPic.src = `images/${playerSelection}.png`;
+		computerPic.src = `images/${computerSelection}_left.png`;
 		playerWin = false;
 		computerWin = false;
 	} else if (playerSelect === 'ROCK' && computerSelect === 'PAPER') {
-		playerPic.src = '/images/rock.png';
-		computerPic.src = '/images/paper_left.png';
+		playerPic.src = 'images/rock.png';
+		computerPic.src = 'images/paper_left.png';
 		playerWin = false;
 		computerWin = true;
 	} else if (playerSelect === 'ROCK' && computerSelect === 'SCISSORS') {
-		playerPic.src = '/images/rock.png';
-		computerPic.src = '/images/scissors_left.png';
+		playerPic.src = 'images/rock.png';
+		computerPic.src = 'images/scissors_left.png';
 		playerWin = true;
 		computerWin = false;
 	} else if (playerSelect === 'PAPER' && computerSelect === 'SCISSORS') {
-		playerPic.src = '/images/paper.png';
-		computerPic.src = '/images/scissors_left.png';
+		playerPic.src = 'images/paper.png';
+		computerPic.src = 'images/scissors_left.png';
 		playerWin = false;
 		computerWin = true;
 	} else if (playerSelect === 'PAPER' && computerSelect === 'ROCK') {
-		playerPic.src = '/images/paper.png';
-		computerPic.src = '/images/rock_left.png';
+		playerPic.src = 'images/paper.png';
+		computerPic.src = 'images/rock_left.png';
 		playerWin = true;
 		computerWin = false;
 	} else if (playerSelect === 'SCISSORS' && computerSelect === 'ROCK') {
-		playerPic.src = '/images/scissors.png';
-		computerPic.src = '/images/rock_left.png';
+		playerPic.src = 'images/scissors.png';
+		computerPic.src = 'images/rock_left.png';
 		playerWin = false;
 		computerWin = true;
 	} else if (playerSelect === 'SCISSORS' && computerSelect === 'PAPER') {
-		playerPic.src = '/images/scissors.png';
-		computerPic.src = '/images/paper_left.png';
+		playerPic.src = 'images/scissors.png';
+		computerPic.src = 'images/paper_left.png';
 		playerWin = true;
 		computerWin = false;
 	}
