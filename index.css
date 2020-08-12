@@ -22,10 +22,6 @@ body {
 	height: 250px;
 }
 
-#player-choice {
-	transform: rotateY(180deg);
-}
-
 h2,
 h3 {
 	color: #e5e5e5;

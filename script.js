@@ -13,34 +13,34 @@ function playRound(playerSelection) {
 	let playerWin = false;
 	if (playerSelect === computerSelect) {
 		playerPic.src = '/images/' + playerSelection + '.png';
-		computerPic.src = '/images/' + computerSelection + '.png';
+		computerPic.src = '/images/' + computerSelection + '_left.png';
 		playerWin = false;
 		return playerWin;
 	} else if (playerSelect === 'ROCK' && computerSelect === 'PAPER') {
 		playerPic.src = '/images/rock.png';
-		computerPic.src = '/images/paper.png';
+		computerPic.src = '/images/paper_left.png';
 		return playerWin;
 	} else if (playerSelect === 'ROCK' && computerSelect === 'SCISSORS') {
 		playerPic.src = '/images/rock.png';
-		computerPic.src = '/images/scissors.png';
+		computerPic.src = '/images/scissors_left.png';
 		playerWin = true;
 		return playerWin;
 	} else if (playerSelect === 'PAPER' && computerSelect === 'SCISSORS') {
 		playerPic.src = '/images/paper.png';
-		computerPic.src = '/images/scissors.png';
+		computerPic.src = '/images/scissors_left.png';
 		return playerWin;
 	} else if (playerSelect === 'PAPER' && computerSelect === 'ROCK') {
 		playerPic.src = '/images/paper.png';
-		computerPic.src = '/images/rock.png';
+		computerPic.src = '/images/rock_left.png';
 		playerWin = true;
 		return playerWin;
 	} else if (playerSelect === 'SCISSORS' && computerSelect === 'ROCK') {
 		playerPic.src = '/images/scissors.png';
-		computerPic.src = '/images/rock.png';
+		computerPic.src = '/images/rock_left.png';
 		return playerWin;
 	} else if (playerSelect === 'SCISSORS' && computerSelect === 'PAPER') {
 		playerPic.src = '/images/scissors.png';
-		computerPic.src = '/images/paper.png';
+		computerPic.src = '/images/paper_left.png';
 		playerWin = true;
 		return playerWin;
 	}
