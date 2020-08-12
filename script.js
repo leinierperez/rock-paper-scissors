@@ -18,8 +18,8 @@ function playRound(playerSelection) {
 	let playerWin = false;
 	let computerWin = false;
 	if (playerSelect === computerSelect) {
-		playerPic.src = `images/${playerSelection}.png`;
-		computerPic.src = `images/${computerSelection}_left.png`;
+		playerPic.src = 'images/' + playerSelection.toLowerCase() + '.png';
+		computerPic.src = 'images/' + computerSelection.toLowerCase() + '_left.png';
 		playerWin = false;
 		computerWin = false;
 	} else if (playerSelect === 'ROCK' && computerSelect === 'PAPER') {
@@ -74,8 +74,6 @@ let playerScore = 0;
 let computerScore = 0;
 let isGameOver = false;
 function game(playerWin, computerWin, playerSelection, computerSelection) {
-	console.log(playerSelection);
-	console.log(computerSelection);
 	if (playerWin) {
 		playerScore = playerScore + 1;
 		displayPlayerScore.innerHTML = `Player Score: ${playerScore}`;
