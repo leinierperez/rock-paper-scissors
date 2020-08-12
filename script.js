@@ -1,23 +1,12 @@
-const buttons = document.querySelectorAll('button');
+let buttons = document.querySelectorAll('button');
+
 buttons.forEach((button) => {
-	button.addEventListener('click', playRound);
+	let playerSelection = button.id;
+	button.addEventListener('click', (e) => playRound(playerSelection));
 });
 
-function computerPlay() {
-	let randNum = Math.floor(Math.random() * 3);
-	if (randNum === 0) {
-		return 'Rock';
-	} else if (randNum === 1) {
-		return 'Paper';
-	} else if (randNum === 2) {
-		return 'Scissors';
-	}
-}
-
-function playRound(e) {
-	let playerSelection = e.target.id;
+function playRound(playerSelection) {
 	let computerSelection = computerPlay();
-
 	let playerSelect = playerSelection.toUpperCase();
 	let computerSelect = computerSelection.toUpperCase();
 	let playerWin = false;
@@ -39,6 +28,17 @@ function playRound(e) {
 	} else if (playerSelect === 'SCISSORS' && computerSelect === 'PAPER') {
 		playerWin = true;
 		return playerWin;
+	}
+}
+
+function computerPlay() {
+	let randNum = Math.floor(Math.random() * 3);
+	if (randNum === 0) {
+		return 'Rock';
+	} else if (randNum === 1) {
+		return 'Paper';
+	} else if (randNum === 2) {
+		return 'Scissors';
 	}
 }
 
