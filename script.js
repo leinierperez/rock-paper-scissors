@@ -12,8 +12,8 @@ function playRound(playerSelection) {
 	let computerSelect = computerSelection.toUpperCase();
 	let playerWin = false;
 	if (playerSelect === computerSelect) {
-		playerPic.src = '/images/' + playerSelection + '.png';
-		computerPic.src = '/images/' + computerSelection + '_left.png';
+		playerPic.src = `/images/${playerSelection}.png`;
+		computerPic.src = `/images/${computerSelection}_left.png`;
 		playerWin = false;
 		return playerWin;
 	} else if (playerSelect === 'ROCK' && computerSelect === 'PAPER') {
