@@ -1,5 +1,6 @@
 let buttons = document.querySelectorAll('button');
-
+let playerPic = document.getElementById('player-choice');
+let computerPic = document.getElementById('computer-choice');
 buttons.forEach((button) => {
 	let playerSelection = button.id;
 	button.addEventListener('click', (e) => playRound(playerSelection));
@@ -11,21 +12,35 @@ function playRound(playerSelection) {
 	let computerSelect = computerSelection.toUpperCase();
 	let playerWin = false;
 	if (playerSelect === computerSelect) {
+		playerPic.src = '/images/' + playerSelection + '.png';
+		computerPic.src = '/images/' + computerSelection + '.png';
 		playerWin = false;
 		return playerWin;
 	} else if (playerSelect === 'ROCK' && computerSelect === 'PAPER') {
+		playerPic.src = '/images/rock.png';
+		computerPic.src = '/images/paper.png';
 		return playerWin;
 	} else if (playerSelect === 'ROCK' && computerSelect === 'SCISSORS') {
+		playerPic.src = '/images/rock.png';
+		computerPic.src = '/images/scissors.png';
 		playerWin = true;
 		return playerWin;
 	} else if (playerSelect === 'PAPER' && computerSelect === 'SCISSORS') {
+		playerPic.src = '/images/paper.png';
+		computerPic.src = '/images/scissors.png';
 		return playerWin;
 	} else if (playerSelect === 'PAPER' && computerSelect === 'ROCK') {
+		playerPic.src = '/images/paper.png';
+		computerPic.src = '/images/rock.png';
 		playerWin = true;
 		return playerWin;
 	} else if (playerSelect === 'SCISSORS' && computerSelect === 'ROCK') {
+		playerPic.src = '/images/scissors.png';
+		computerPic.src = '/images/rock.png';
 		return playerWin;
 	} else if (playerSelect === 'SCISSORS' && computerSelect === 'PAPER') {
+		playerPic.src = '/images/scissors.png';
+		computerPic.src = '/images/paper.png';
 		playerWin = true;
 		return playerWin;
 	}
