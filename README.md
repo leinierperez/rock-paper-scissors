@@ -1,1 +1,3 @@
-Simple implementation of grade-school classic "rock paper scissors".
+Implementation of grade-school classic "Rock Paper Scissors".
+
+View in Browser: https://leinierperez.github.io/rock-paper-scissors/
