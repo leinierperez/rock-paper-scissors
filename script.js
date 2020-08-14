@@ -65,7 +65,7 @@ function setPics(playerSelect, computerSelect) {
 }
 
 function computerPlay() {
-	let choices = [ 'Rock', 'Rock', 'Rock', 'Paper', 'Scissors' ];
+	let choices = [ 'Rock', 'Paper', 'Scissors' ];
 	let randNum = Math.floor(Math.random() * choices.length);
 	return choices[randNum];
 }
