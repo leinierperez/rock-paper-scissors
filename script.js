@@ -15,44 +15,43 @@ function playRound(playerSelection) {
 	let computerSelection = computerPlay();
 	let playerSelect = playerSelection.toUpperCase();
 	let computerSelect = computerSelection.toUpperCase();
+
 	let playerWin = false;
 	let computerWin = false;
-	if (playerSelect === computerSelect) {
-		playerPic.src = 'images/' + playerSelection.toLowerCase() + '.png';
-		computerPic.src = 'images/' + computerSelection.toLowerCase() + '_left.png';
+
+	function noWinner() {
 		playerWin = false;
 		computerWin = false;
-	} else if (playerSelect === 'ROCK' && computerSelect === 'PAPER') {
-		playerPic.src = 'images/rock.png';
-		computerPic.src = 'images/paper_left.png';
-		playerWin = false;
-		computerWin = true;
-	} else if (playerSelect === 'ROCK' && computerSelect === 'SCISSORS') {
-		playerPic.src = 'images/rock.png';
-		computerPic.src = 'images/scissors_left.png';
-		playerWin = true;
-		computerWin = false;
-	} else if (playerSelect === 'PAPER' && computerSelect === 'SCISSORS') {
-		playerPic.src = 'images/paper.png';
-		computerPic.src = 'images/scissors_left.png';
-		playerWin = false;
-		computerWin = true;
-	} else if (playerSelect === 'PAPER' && computerSelect === 'ROCK') {
-		playerPic.src = 'images/paper.png';
-		computerPic.src = 'images/rock_left.png';
-		playerWin = true;
-		computerWin = false;
-	} else if (playerSelect === 'SCISSORS' && computerSelect === 'ROCK') {
-		playerPic.src = 'images/scissors.png';
-		computerPic.src = 'images/rock_left.png';
-		playerWin = false;
-		computerWin = true;
-	} else if (playerSelect === 'SCISSORS' && computerSelect === 'PAPER') {
-		playerPic.src = 'images/scissors.png';
-		computerPic.src = 'images/paper_left.png';
+	}
+
+	function playerWins() {
 		playerWin = true;
 		computerWin = false;
 	}
+
+	function computerWins() {
+		playerWin = false;
+		computerWin = true;
+	}
+
+	if (playerSelect === computerSelect) {
+		noWinner();
+	} else if (
+		(playerSelect === 'ROCK' && computerSelect === 'SCISSORS') ||
+		(playerSelect === 'PAPER' && computerSelect === 'ROCK') ||
+		(playerSelect === 'SCISSORS' && computerSelect === 'PAPER')
+	) {
+		playerWins();
+	} else if (
+		(playerSelect === 'ROCK' && computerSelect === 'PAPER') ||
+		(playerSelect === 'PAPER' && computerSelect === 'SCISSORS') ||
+		(playerSelect === 'SCISSORS' && computerSelect === 'ROCK')
+	) {
+		computerWins();
+	}
+
+	setPics(playerSelect.toLowerCase(), computerSelect.toLowerCase());
+
 	if (isGameOver) {
 		resetGame();
 		isGameOver = false;
@@ -60,16 +59,17 @@ function playRound(playerSelection) {
 	game(playerWin, computerWin, playerSelection, computerSelection);
 }
 
-function computerPlay() {
-	let randNum = Math.floor(Math.random() * 3);
-	if (randNum === 0) {
-		return 'Rock';
-	} else if (randNum === 1) {
-		return 'Paper';
-	} else if (randNum === 2) {
-		return 'Scissors';
-	}
+function setPics(playerSelect, computerSelect) {
+	playerPic.src = `images/${playerSelect}.png`;
+	computerPic.src = `images/${computerSelect}_left.png`;
 }
+
+function computerPlay() {
+	let choices = [ 'Rock', 'Rock', 'Rock', 'Paper', 'Scissors' ];
+	let randNum = Math.floor(Math.random() * choices.length);
+	return choices[randNum];
+}
+
 let playerScore = 0;
 let computerScore = 0;
 let isGameOver = false;
